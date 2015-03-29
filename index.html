@@ -7,8 +7,12 @@
         <script type="text/javascript" charset="utf-8">
         
             document.addEventListener("deviceready", onDeviceReady, false);
+            
+            
             function onDeviceReady() {
-                console.log(device.cordova);
+                var element = document.getElementById('deviceProperties');
+                element.innerHTML = 'Device Name: ' + device.name + '<br />' +
+                                    'Device Cordova: ' + device.cordova + '<br />';
             }    
         
         </script>
